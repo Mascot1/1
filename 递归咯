@@ -1,0 +1,24 @@
+12.2号
+//用递归的办法求nd阶乘
+#include<stdio.h>
+int Fac(int n) {
+
+	if (n <= 1)
+		return 1;
+	else
+		return n * Fac(n - 1);//这里就是递归
+}
+
+int main()
+{
+	int n;
+	int ret = 0;
+	scanf("%d", &n);
+	ret = Fac(n);
+	printf("%d", ret);
+	return 0;
+}
+
+//在数学上，小于等于1的舒阶乘为1
+//n的阶乘又等于n*n-1的阶乘，所以符合递归
+//这题的控制n不会栈溢出
